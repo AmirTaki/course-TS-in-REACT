@@ -1,7 +1,9 @@
 
+type Color = 'black' | 'white' | 'yellow'
+
 type ButtonProps = {    
     backgroundColor: 'red' | 'blue' | 'green', 
-    textColor: 'black' | 'white' | 'yellow'
+    textColor: Color
     size: any, 
     pillShape?: boolean
 }
