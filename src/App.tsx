@@ -1,14 +1,22 @@
 import './App.css'
 
+function convertCurrency (amount: number, currency: string): boolean{
+  ///
+  return true
+}
+convertCurrency(123, 'ab')
+
+
+const arrowFunction = (amount: number, currency: string): boolean => {
+  return false
+}
+arrowFunction(123, 'abc')
+
 function App() {
- 
-let url: string = 'https://www.google.com'
-let value: number = 13
 
   return (
       <>
-        <p className='text-blue-600'>{url}</p>
-        <h2 className='text-pink-400'>{value}</h2>
+
       </>  
   )
 }
