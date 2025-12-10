@@ -2,12 +2,14 @@ import './App.css'
 
 function App() {
  
+let url: string = 'https://www.google.com'
+let value: number = 13
+
   return (
-    <>
-     <p
-     className='bg-yellow-400'
-     >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur officiis adipisci porro maxime, dolor doloribus quisquam modi alias iste tenetur neque maiores, fugiat unde labore similique quia molestiae aliquam eaque.</p>
-    </>
+      <>
+        <p className='text-blue-600'>{url}</p>
+        <h2 className='text-pink-400'>{value}</h2>
+      </>  
   )
 }
 
