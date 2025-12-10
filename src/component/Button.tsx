@@ -5,16 +5,22 @@ type ButtonProps = {
     backgroundColor: 'red' | 'blue' | 'green', 
     textColor: Color
     size: any, 
-    pillShape?: boolean
+    pillShape?: boolean,
+    padding: string[]
 }
-const Button = ({backgroundColor, size, textColor}: ButtonProps) => {
+const Button = ({backgroundColor, size, textColor, padding}: ButtonProps) => {
 
 
     return(
         <>
             <button 
-                style={{background : backgroundColor, fontSize : size, color : textColor }}
-                className="bg-blue-500 text-white rounded px-4 py-2">
+                style={{
+                        background : backgroundColor, 
+                        fontSize : size,
+                        color : textColor,
+                        padding : `${padding[0]} ${padding[1]}`
+                    }}
+                className="bg-blue-500 text-white rounded  py-2">
                 Click me
             </button>
         </>
