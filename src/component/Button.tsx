@@ -1,5 +1,11 @@
 
-const Button = ({backgroundColor, size, pillShape}: {backgroundColor: string, size: number, pillShape: boolean}) => {
+
+type ButtonProps = {    
+    backgroundColor: string, 
+    size: number, 
+    pillShape: boolean
+}
+const Button = ({backgroundColor, size, pillShape}: ButtonProps) => {
     
     
     return(
