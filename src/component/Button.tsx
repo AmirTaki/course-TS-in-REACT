@@ -1,14 +1,7 @@
 
-type Color = 'black' | 'white' | 'yellow'
 
 type ButtonProps = {  
-    style : {
-        backgroundColor: 'red' | 'blue' | 'green', 
-        textColor: Color
-        size: any, 
-        pillShape?: boolean,
-        padding: string // tuple
-    }  
+    style : React.CSSProperties
 }
 const Button = ({style}: ButtonProps) => {
 
@@ -17,7 +10,7 @@ const Button = ({style}: ButtonProps) => {
         <>
             <button 
                 style={style}
-                className="bg-blue-500 text-white rounded  py-2">
+                className="rounded  py-2">
                 Click me
             </button>
         </>

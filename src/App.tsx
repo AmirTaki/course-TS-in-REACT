@@ -7,10 +7,10 @@ function App() {
       <div className='flex justify-center items-center h-screen'>
         <Button style={{
           backgroundColor: 'red', 
-          size: 30, 
-          textColor: 'white',
-          padding : `${10}px ${20}px ${30}px ${40}px`
-
+          fontSize: 30, 
+          color: 'white',
+          padding : `${10}px ${20}px ${30}px ${40}px`,
+          border: '10px solid yellow',
         }}/>
       </div>  
   )
