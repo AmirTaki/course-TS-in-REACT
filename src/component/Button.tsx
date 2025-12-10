@@ -1,22 +1,16 @@
 
 
 type ButtonProps = { 
-    // borderRadius : {
-    //     topLeft: number, 
-    //     topRight: number,
-    //     bottomRight: number,
-    //     bottomLeft: number
-    // }
 
-    borderRadius: Record<string, number>
+    onClick : (value: string) => number
 }
-const Button = ({borderRadius}: ButtonProps) => {
+const Button = ({onClick}: ButtonProps) => {
 
 
     return(
         <>
             <button 
-                style={{borderRadius: `${borderRadius.topRight}px ${borderRadius.topLeft}px ${borderRadius.bottomRight}px ${borderRadius.bottomLeft}px` }}
+                onClick={()=> {onClick('test')}}
                 className="rounded  py-2 bg-blue-500 text-white px-3">
                 Click me
             </button>
