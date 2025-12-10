@@ -1,23 +1,12 @@
 import './App.css'
-
-function convertCurrency (amount: number, currency: string): boolean{
-  ///
-  return true
-}
-convertCurrency(123, 'ab')
-
-
-const arrowFunction = (amount: number, currency: string): boolean => {
-  return false
-}
-arrowFunction(123, 'abc')
+import Button from './component/Button'
 
 function App() {
 
   return (
-      <>
-
-      </>  
+      <div className='flex justify-center items-center h-screen'>
+        <Button backgroundColor = {'yellow'}/>
+      </div>  
   )
 }
 
