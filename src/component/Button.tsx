@@ -6,7 +6,7 @@ type ButtonProps = {
     textColor: Color
     size: any, 
     pillShape?: boolean,
-    padding: string[]
+    padding: [number, number, number, number] // tuple
 }
 const Button = ({backgroundColor, size, textColor, padding}: ButtonProps) => {
 
@@ -18,7 +18,7 @@ const Button = ({backgroundColor, size, textColor, padding}: ButtonProps) => {
                         background : backgroundColor, 
                         fontSize : size,
                         color : textColor,
-                        padding : `${padding[0]} ${padding[1]}`
+                        // padding : `${padding[0]} ${padding[1]}`
                     }}
                 className="bg-blue-500 text-white rounded  py-2">
                 Click me
