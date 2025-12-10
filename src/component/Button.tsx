@@ -3,9 +3,9 @@
 type ButtonProps = {    
     backgroundColor: string, 
     size: number, 
-    pillShape: boolean
+    pillShape?: boolean
 }
-const Button = ({backgroundColor, size, pillShape}: ButtonProps) => {
+const Button = ({backgroundColor, size, }: ButtonProps) => {
     
     
     return(

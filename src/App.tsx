@@ -5,7 +5,7 @@ function App() {
 
   return (
       <div className='flex justify-center items-center h-screen'>
-        <Button backgroundColor = {'yellow'} size = {30} pillShape = {true}/>
+        <Button backgroundColor = {'yellow'} size = {30} />
       </div>  
   )
 }
