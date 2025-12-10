@@ -7,7 +7,9 @@ type ButtonProps = {
 }
 const Button = ({backgroundColor, size, }: ButtonProps) => {
     
-    
+    backgroundColor.toUpperCase()
+    // size.toUpperCase()
+    size.toString()
     return(
         <>
             <button 
@@ -20,3 +22,8 @@ const Button = ({backgroundColor, size, }: ButtonProps) => {
 }
 
 export default Button
+
+// https://www.youtube.com/watch?v=TPACABQTHvM 8:20
+
+
+// https://www.youtube.com/watch?v=t6C5stFcmKk&list=PLjF2hdyaGueMSCilyF3OgykRYZZ562WnN
