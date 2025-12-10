@@ -1,13 +1,11 @@
 
-const Button = (props: {backgroundColor: string}) => {
+const Button = ({backgroundColor, size, pillShape}: {backgroundColor: string, size: number, pillShape: boolean}) => {
     
-    // const backgroundColor = props.backgroundColor
-    const {backgroundColor} =  props
     
     return(
         <>
             <button 
-                style={{color : backgroundColor}}
+                style={{color : backgroundColor, fontSize : size }}
                 className="bg-blue-500 text-white rounded px-4 py-2">
                 Click me
             </button>
