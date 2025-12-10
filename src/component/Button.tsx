@@ -2,14 +2,12 @@
 
 type ButtonProps = {    
     backgroundColor: string, 
-    size: number, 
+    size: any, 
     pillShape?: boolean
 }
 const Button = ({backgroundColor, size, }: ButtonProps) => {
-    
-    backgroundColor.toUpperCase()
-    // size.toUpperCase()
-    size.toString()
+    size.toUpperCase()
+
     return(
         <>
             <button 
