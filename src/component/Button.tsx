@@ -1,16 +1,23 @@
 
 
-type ButtonProps = {  
-    style : React.CSSProperties
+type ButtonProps = { 
+    // borderRadius : {
+    //     topLeft: number, 
+    //     topRight: number,
+    //     bottomRight: number,
+    //     bottomLeft: number
+    // }
+
+    borderRadius: Record<string, number>
 }
-const Button = ({style}: ButtonProps) => {
+const Button = ({borderRadius}: ButtonProps) => {
 
 
     return(
         <>
             <button 
-                style={style}
-                className="rounded  py-2">
+                style={{borderRadius: `${borderRadius.topRight}px ${borderRadius.topLeft}px ${borderRadius.bottomRight}px ${borderRadius.bottomLeft}px` }}
+                className="rounded  py-2 bg-blue-500 text-white px-3">
                 Click me
             </button>
         </>
