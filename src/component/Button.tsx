@@ -7,14 +7,13 @@ interface IButtonProps {
     setCount: React.Dispatch<React.SetStateAction<number>>
 }
 
-type URL = string;
-const url: URL = "https://google.com";
+type Color = "red" | "blue" | 'green'
 
-interface URLs {
-    href: string
+interface Colors  {
+    color: 'red' | 'silver' | 'blue'
 }
 
-const urls: URLs = {href: "https://google.com"}
+
 
 const Button = ({children, count, setCount}: IButtonProps) => {
 
