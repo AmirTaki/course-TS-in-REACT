@@ -6,15 +6,15 @@ type ButtonProps = {
     count: number
 
 }
-const Button = ({children, setCount, count}: ButtonProps) => {
+const Button = ({count = 120}) => {
 
 
     return(
         <>
             <button
-                onClick={() => {setCount((prevCount: number) => (prevCount + 1))}}
+                // onClick={() => {setCount((prevCount: number) => (prevCount + 1))}}
                 className="rounded  py-2 bg-blue-500 text-white px-3">
-                {children}
+                Click me
             </button>
             {count}
         </>
