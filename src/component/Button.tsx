@@ -7,11 +7,14 @@ interface IButtonProps {
     setCount: React.Dispatch<React.SetStateAction<number>>
 }
 
-// type TButtonProps = { 
-//     children: JSX.Element,
-//     setCount: React.Dispatch<React.SetStateAction<number>>,
-//     count: number
-// }
+type URL = string;
+const url: URL = "https://google.com";
+
+interface URLs {
+    href: string
+}
+
+const urls: URLs = {href: "https://google.com"}
 
 const Button = ({children, count, setCount}: IButtonProps) => {
 
