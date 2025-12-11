@@ -1,18 +1,17 @@
 
 
 type ButtonProps = { 
+    children: React.ReactNode
 
-    onClick : (value: string) => number
 }
-const Button = ({onClick}: ButtonProps) => {
+const Button = ({children}: ButtonProps) => {
 
 
     return(
         <>
-            <button 
-                onClick={()=> {onClick('test')}}
+            <button
                 className="rounded  py-2 bg-blue-500 text-white px-3">
-                Click me
+                {children}
             </button>
         </>
     )
@@ -20,7 +19,7 @@ const Button = ({onClick}: ButtonProps) => {
 
 export default Button
 
-// https://www.youtube.com/watch?v=TPACABQTHvM 8:20
+// https://www.youtube.com/watch?v=TPACABQTHvM 17:45
 
 
 // https://www.youtube.com/watch?v=t6C5stFcmKk&list=PLjF2hdyaGueMSCilyF3OgykRYZZ562WnN
