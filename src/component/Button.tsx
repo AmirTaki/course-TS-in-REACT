@@ -1,20 +1,27 @@
 import type { JSX } from "react"
 
-type ButtonProps = { 
-    children: JSX.Element,
-    setCount: React.Dispatch<React.SetStateAction<number>>,
-    count: number
 
+interface IButtonProps {
+    children: JSX.Element,
+    count: number
+    setCount: React.Dispatch<React.SetStateAction<number>>
 }
-const Button = ({count = 120}) => {
+
+// type TButtonProps = { 
+//     children: JSX.Element,
+//     setCount: React.Dispatch<React.SetStateAction<number>>,
+//     count: number
+// }
+
+const Button = ({children, count, setCount}: IButtonProps) => {
 
 
     return(
         <>
             <button
-                // onClick={() => {setCount((prevCount: number) => (prevCount + 1))}}
+                onClick={() => {setCount((prevCount: number) => (prevCount + 1))}}
                 className="rounded  py-2 bg-blue-500 text-white px-3">
-                Click me
+                {children}
             </button>
             {count}
         </>
