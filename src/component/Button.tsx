@@ -1,7 +1,9 @@
+import type { JSX } from "react"
 
 
 type ButtonProps = { 
-    children: React.ReactNode
+    // children: React.ReactNode
+    children: JSX.Element
 
 }
 const Button = ({children}: ButtonProps) => {

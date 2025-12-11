@@ -3,9 +3,10 @@ import Button from './component/Button'
 
 function App() {
 
+  const icon = <i>Click me!</i>
   return (
       <div className='flex justify-center items-center h-screen'>
-        <Button>Click me!</Button>
+        <Button>{icon}</Button>
       </div>  
   )
 }
