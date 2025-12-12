@@ -1,15 +1,10 @@
+import type { ComponentProps } from "react"
+
+// type ButtonPorps = React.ComponentProps<'button'>
+type ButtonPorps = ComponentProps<'button'>
 
 
-interface IButtonProps {
-    children: React.ReactNode,
-    type : "submit" | 'reset' | 'button' ,
-    autoFocus : boolean
-
-     
-}
-
-
-const Button = ({children, type, autoFocus}: IButtonProps) => {
+const Button = ({type, autoFocus, children}: ButtonPorps ) => {
 
 
     return(
