@@ -1,15 +1,16 @@
-import type { ComponentProps } from "react"
+import type {  ComponentPropsWithRef } from "react"
 
 // type ButtonPorps = React.ComponentProps<'button'>
-type ButtonPorps = ComponentProps<'button'>
+type ButtonPorps = ComponentPropsWithRef<'button'>
 
 
-const Button = ({type, autoFocus, children}: ButtonPorps ) => {
+const Button = ({type, autoFocus, children, ref}: ButtonPorps ) => {
 
 
     return(
         <>
             <button
+                ref = {ref}
                 type = {type}
                 autoFocus = {autoFocus}
                 className="rounded  py-2 bg-blue-500 text-white px-3">
