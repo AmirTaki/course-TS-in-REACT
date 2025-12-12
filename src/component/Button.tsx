@@ -1,12 +1,21 @@
-import { useEffect } from "react"
+import React from "react"
 
-type ButtonColor = 'red' | 'green' | 'blue'
 
-const Button = () => {
+const convertToArray =  <T,>(value: T ): Array<T> => {
+    return [value]
+}
 
-    useEffect(() => {
-        const previousButtonColor = localStorage.getItem('buttonColor') as ButtonColor 
-    }, [])
+
+function ConverToArray <T,> (value:T): T[] {
+    return [value]
+} 
+
+convertToArray<number>(5)
+convertToArray <string> ('Hello')
+convertToArray<boolean>(true)
+convertToArray<Array<string>> (['hello', 'js', 'ts'])
+
+const Button = () => {    
     return(
         <>
             <button
