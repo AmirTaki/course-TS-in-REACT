@@ -1,4 +1,10 @@
-type Color = 'red' | 'blue' | 'green'
+import type { Color } from "../lib/types"
+
+
+type ButtonProps = {
+    color: Color,
+    fontSize: number
+}
 
 const Button = () => {    
     return(
