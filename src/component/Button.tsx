@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 interface User {
     name: string , 
@@ -6,20 +6,14 @@ interface User {
 }
 
 const Button = () => {
-    const [count, setCount] = useState<number>(0)
-    const [text, setText] = useState<string>("Click me!")
-    const [isPrimary, setIsPrimary] = useState(true)
 
-    const [user, setUser] = useState<User | null>(null)
+    useEffect(() => {})
 
-    const name = user?.name
-    const age = user?.age
-
-
+    const ref =  useRef< HTMLButtonElement | null >(null)
     return(
         <>
             <button
-               
+                ref = {ref}
                 className = {`rounded  text-white py-2 e px-3 bg-red-700  `}>
                 click Me
             </button>
