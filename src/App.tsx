@@ -12,6 +12,8 @@ function App() {
           ref = {ref}
           type = 'submit'
           autoFocus = {true}
+          defaultValue='test'
+          className='bg-red-700'
         >
           ClickMe
         </Button>
