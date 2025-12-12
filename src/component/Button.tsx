@@ -1,18 +1,17 @@
-const buttonTextOptions = [
-    "Click me!",
-    "Click me again!",
-    "Click me one more time!"
-] as const
+type User = {
+    sessionId: string,
+    name: string,
+    isPublished: boolean
+}
+
+type Guest =  Omit<User, 'name'>
 
 const Button = () => {
-
     return(
         <>
             <button
                 className = {`rounded  text-white py-2 e px-3 bg-red-700  `}>
-                {buttonTextOptions.map((option) => {
-                    return option
-                })}
+                    Click me!
             </button>
         </>
     )
