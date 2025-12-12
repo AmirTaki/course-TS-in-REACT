@@ -1,9 +1,9 @@
-type ButtonProps = {
+interface ButtonProps {
     type : 'button' | 'submit' | 'reset';
     color: 'red' | 'blue' | 'green'
 }
 
-type SuperButtonProps = ButtonProps & {
+interface SuperButtonProps extends ButtonProps {
     size: 'md' | 'lg'
 }
 
