@@ -6,11 +6,7 @@ function App() {
 
   return (
       <div className='flex justify-center items-center h-screen'>
-        <Button
-          type = 'button'
-          color = 'blue'
-          size = 'lg'
-        />
+        <Button  />
       </div>  
   )
 }

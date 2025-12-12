@@ -1,20 +1,16 @@
-interface ButtonProps {
-    type : 'button' | 'submit' | 'reset';
-    color: 'red' | 'blue' | 'green'
-}
 
-interface SuperButtonProps extends ButtonProps {
-    size: 'md' | 'lg'
-}
 
-const Button = ({type, color, size}: SuperButtonProps) => {
+const Button = () => {
+
+    const handlerClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        console.log(event)
+    }   
+
     return(
         <>
             <button
-                type = {type}
-                style = {{color: color}}
-
-                className = {`rounded  text-white py-2 e px-3 bg-red-700 ${size} `}>
+                onClick={handlerClick}
+                className = {`rounded  text-white py-2 e px-3 bg-red-700  `}>
                 click Me
             </button>
         </>
