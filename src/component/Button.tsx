@@ -1,26 +1,21 @@
-import type {  ComponentPropsWithRef } from "react"
-
-// type ButtonPorps = React.ComponentProps<'button'>
-type ButtonPorps = ComponentPropsWithRef<'button'> &
-
-{
-    variant: 'blue' | 'pink'
+type ButtonProps = {
+    type : 'button' | 'submit' | 'reset';
+    color: 'red' | 'blue' | 'green'
 }
 
+type SuperButtonProps = ButtonProps & {
+    size: 'md' | 'lg'
+}
 
-const Button = ({type, autoFocus, children, ref, variant, ...rest}: ButtonPorps ) => {
-
-
+const Button = ({type, color, size}: SuperButtonProps) => {
     return(
         <>
             <button
-                ref = {ref}
                 type = {type}
-                autoFocus = {autoFocus}
-                {...rest}
-                style={{color: variant}}
-                className = {`rounded  py-2 e px-3 bg-red-700 `}>
-                {children}
+                style = {{color: color}}
+
+                className = {`rounded  text-white py-2 e px-3 bg-red-700 ${size} `}>
+                click Me
             </button>
         </>
     )
