@@ -1,15 +1,11 @@
-type ButtonProps <T>= {
-    countValue: T;
-    countHistory: T[]
-}
+type Color = 'red' | 'blue' | 'green'
 
-
-const Button = <T, >({countValue, countHistory}: ButtonProps<T>) => {    
+const Button = () => {    
     return(
         <>
             <button
                 className = {`rounded  text-white py-2 e px-3 bg-red-700  `}>
-                    Click me! {countValue}
+                    Click me!
             </button>
         </>
     )
