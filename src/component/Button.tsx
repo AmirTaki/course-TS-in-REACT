@@ -1,12 +1,12 @@
-type User = {
-    sessionId: string,
-    name: string,
-    isPublished: boolean
-}
+import { useEffect } from "react"
 
-type Guest =  Omit<User, 'name'>
+type ButtonColor = 'red' | 'green' | 'blue'
 
 const Button = () => {
+
+    useEffect(() => {
+        const previousButtonColor = localStorage.getItem('buttonColor') as ButtonColor 
+    }, [])
     return(
         <>
             <button
