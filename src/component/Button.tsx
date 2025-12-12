@@ -1,21 +1,18 @@
-import { useEffect, useRef, useState } from "react"
-
-interface User {
-    name: string , 
-    age: number
-}
+const buttonTextOptions = [
+    "Click me!",
+    "Click me again!",
+    "Click me one more time!"
+] as const
 
 const Button = () => {
 
-    useEffect(() => {})
-
-    const ref =  useRef< HTMLButtonElement | null >(null)
     return(
         <>
             <button
-                ref = {ref}
                 className = {`rounded  text-white py-2 e px-3 bg-red-700  `}>
-                click Me
+                {buttonTextOptions.map((option) => {
+                    return option
+                })}
             </button>
         </>
     )
