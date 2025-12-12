@@ -6,6 +6,11 @@ const Button = () => {
         .then((response) => response.json())
         .then((data: unknown) => {
             console.log(data)
+
+            // run it through Zod
+            // cont todo = todoSchema.parse(data)
+            
+            // do something with the data
             
         })
     }, [])
