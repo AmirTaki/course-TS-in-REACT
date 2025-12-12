@@ -13,7 +13,8 @@ function App() {
           type = 'submit'
           autoFocus = {true}
           defaultValue='test'
-          className='bg-red-700'
+          className='0'
+          variant = 'blue'
         >
           ClickMe
         </Button>

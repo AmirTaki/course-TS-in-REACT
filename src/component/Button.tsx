@@ -1,21 +1,25 @@
 import type {  ComponentPropsWithRef } from "react"
 
 // type ButtonPorps = React.ComponentProps<'button'>
-type ButtonPorps = ComponentPropsWithRef<'button'>
+type ButtonPorps = ComponentPropsWithRef<'button'> &
+
+{
+    variant: 'blue' | 'pink'
+}
 
 
-const Button = ({type, autoFocus, children, ref, ...rest}: ButtonPorps ) => {
+const Button = ({type, autoFocus, children, ref, variant, ...rest}: ButtonPorps ) => {
 
 
     return(
         <>
             <button
                 ref = {ref}
-                
                 type = {type}
                 autoFocus = {autoFocus}
                 {...rest}
-                className = {`rounded  py-2 text-white px-3 bg-red-700 `}>
+                style={{color: variant}}
+                className = {`rounded  py-2 e px-3 bg-red-700 `}>
                 {children}
             </button>
         </>
