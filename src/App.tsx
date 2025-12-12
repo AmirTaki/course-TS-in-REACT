@@ -6,7 +6,7 @@ function App() {
 
   return (
       <div className='flex justify-center items-center h-screen'>
-        <Button  />
+        <Button countValue = {1} countHistory = {[1, 2, 3, 4]} />
       </div>  
   )
 }
