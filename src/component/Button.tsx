@@ -1,15 +1,25 @@
+import { useState } from "react"
 
+interface User {
+    name: string , 
+    age: number
+}
 
 const Button = () => {
+    const [count, setCount] = useState<number>(0)
+    const [text, setText] = useState<string>("Click me!")
+    const [isPrimary, setIsPrimary] = useState(true)
 
-    const handlerClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        console.log(event)
-    }   
+    const [user, setUser] = useState<User | null>(null)
+
+    const name = user?.name
+    const age = user?.age
+
 
     return(
         <>
             <button
-                onClick={handlerClick}
+               
                 className = {`rounded  text-white py-2 e px-3 bg-red-700  `}>
                 click Me
             </button>
