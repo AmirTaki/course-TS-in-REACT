@@ -1,15 +1,23 @@
 import './App.css'
-import Child from './component/Child'
+import Controls from './component/controls'
+import Display from './component/display'
+import { CounterProvider, useCounter } from './shared/context'
+
+function AppContent() {
+  const { state, dispatch } = useCounter()
+  return (
+    <div className=" flex flex-col justify-center items-center h-screen bg-black text-white">
+      <Display {...state} />
+      <Controls handler={dispatch} />
+    </div>
+  )
+}
 
 function App() {
-  
-
   return (
-      <div className=" flex flex-col justify-center items-center h-screen">
-        <Child >
-          {(num: number) => <>Current Count : {num}</>}
-        </Child>
-      </div>
+    <CounterProvider>
+      <AppContent />
+    </CounterProvider>
   )
 }
 
