@@ -1,10 +1,25 @@
-import React, {  useCallback, useEffect, useState,  } from 'react'
+import React, {  useCallback, useEffect, useMemo, useState,  } from 'react'
 import './App.css'
 
 interface User {
   name: string, 
   age: number
 }
+
+type fibFunc = (n: number)  => number
+
+const fib: fibFunc = (n) => {
+  if (n < 2){ return 1}
+  else {
+    // return fib(n - 1) + fib(n + 2)
+    return fib(n - 1)
+  }
+}
+
+const myNum: number = 30;
+
+// console.log(fib(myNum))
+
 
 function App() {
   
@@ -23,6 +38,10 @@ function App() {
     setCount((prev) => prev + 1)
     console.log(e)
   }, [])
+
+
+  const results = useMemo<number>(() => fib(myNum), [myNum])
+
   return (
       <div className='flex justify-center items-center h-screen'>
         <h1>{count}</h1>
@@ -32,8 +51,14 @@ function App() {
         >
           ADD
         </button>
+
+        <h2 className='bg-emerald-400'>{results}</h2>
       </div>  
   )
 }
 
 export default App
+
+// https://www.youtube.com/watch?v=2NEV_M7NN6k
+
+//https://www.youtube.com/results?search_query=hook+in+ract+ts
